@@ -9,7 +9,7 @@ if (mysqli_connect_errno()) {
     echo "Failed to connect to MySQL: " . mysqli_connect_error();
 }
 
-$sql = "select books.book_id, books.title, books.genre, books.genre,books.price, authors.author author
+$sql = "select books.book_id, books.title, books.genre, books.stock, books.price, authors.author author
 from books
 INNER JOIN authors on books.author_id = authors.id";
 if ($result = mysqli_query($con, $sql)) {
